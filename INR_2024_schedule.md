@@ -9,22 +9,20 @@ home: https://bioinformaticsdotca.github.io/INR_2024
 description: Introduction R Schedule
 ---
 
-**Course schedule coming soon!**
 
-<!-- 
-| Time (Eastern) |                                Monday, June 26                                | Time (Eastern) |                                    Tuesday, June 27                                     |
-| :------------: | :---------------------------------------------------------------------------: | :------------: | :-------------------------------------------------------------------------------------: |
-|      8:30      |                <font color="green">Arrivals & Check-in</font>                 |      8:30      |                           <font color="green">Arrivals</font>                           |
-|      9:00      |               <font color="purple">Welcome (Nia Hughes)</font>                |      9:00      | <font color="purple">Day 2 Review Module 3: Loops and functions (Frances Wong)</font> |
-|      9:30      |    <font color="purple">Module 1: Getting to Know R (Frances Wong)</font>     |     10:00      |                        <font color="green">Break (15 min)</font>                        |
-|     10:30      |                   <font color="green">Break (15 min)</font>                   |     10:15      |          <font color="purple">Module 3: Loops and functions (continued)</font>          |
-|     10:45      |      <font color="purple">Module 1: Getting to Know R (continued)</font>      |     11:00      |                        <font color="green">Break (15 min)</font>                        |
-|     11:15      |                   <font color="green">Break (15 min)</font>                   |     11:15      |          <font color="purple">Module 3: Loops and functions (continued)</font>          |
-|     11:30      |      <font color="purple">Module 1: Getting to Know R (continued)</font>      |     12:00      |                          <font color="green">Class Photo + Lunch (1h)</font>                          |
-|     12:00      |                     <font color="green">Lunch (1h)</font>                     |     13:00      |         <font color="purple">Module 4: Linear regression (Frances Wong)</font>          |
-|     13:00      | <font color="purple">Module 2: Exploring your data in R (Frances Wong)</font> |     14:00      |                        <font color="green">Break (15 min)</font>                        |
-|     14:00      |                   <font color="green">Break (15min)</font>                    |     14:15      |           <font color="purple">Module 4: Linear regression (continued)</font>           |
-|     14:15      |  <font color="purple">Module 2: Exploring your data in R (continued)</font>   |     15:15      |                        <font color="green">Break (15 min)</font>                        |
-|     15:15      |                   <font color="green">Break (15min)</font>                    |     15:30      |                        <font color="purple">Short project</font>                        |
-|     15:30      |             <font color="purple">Review and short project</font>              |     17:00      |                  <font color="purple">Survey & Closing Remarks</font>                   |
-|     17:30      |                      <font color="green">Finished</font>                      |     17:30      |                           <font color="green">Finished</font>                           | -->
+| Time (EDT) |                       June 11                       | Time (EDT) |                         June 12                        |
+|:----------:|:---------------------------------------------------:|:----------:|:-----------------------------------------------------:|
+|    8:30    |                 Arrivals & Check-in                 |    8:30    |                        Arrivals                       |
+|    9:00    |                 Welcome (Nia Hughes)                |    9:00    | Review & Module 3: Loops and functions (Frances Wong) |
+|    9:30    |      Module 1: Getting to Know R (Frances Wong)     |    10:00   |                     Break (15min)                     |
+|    10:30   |                    Break (15min)                    |    10:15   |         Module 3: Loops and functions (cont'd)        |
+|    10:45   |         Module 1: Getting to Know R (cont'd)        |    11:00   |                     Break (15min)                     |
+|    11:15   |                    Break (15min)                    |    11:15   |         Module 3: Loops and functions (cont'd)        |
+|    11:30   |         Module 1: Getting to Know R (cont'd)        |    12:00   |                Class Photo + Break (1h)               |
+|    12:00   |                      Break (1h)                     |    13:00   |       Module 4: Linear regression (Frances Wong)      |
+|    13:00   | Module 2: Exploring your data in R   (Frances Wong) |    14:00   |                     Break (15min)                     |
+|    14:00   |                    Break (15min)                    |    14:15   |          Module 4: Linear regression (cont'd)         |
+|    14:15   |    Module 2: Exploring your data in R   (cont'd)    |    15:15   |                     Break (15min)                     |
+|    15:15   |                    Break (15min)                    |    15:30   |                     Short Project                     |
+|    15:30   |               Review and Short project              |    17:00   |                Survey & Closing Remarks               |
+|    17:30   |                       Finished                      |    17:30   |                        Finished                       |
