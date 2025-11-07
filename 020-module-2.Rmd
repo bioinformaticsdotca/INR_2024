@@ -29,7 +29,7 @@ Insert a code chunk underneath each step to carry out the instruction.
 1. Read in the "water_potability.csv" data into an object called data Check the object you created by printing out the first 10 rows and applying the summary function.
 
 ```{r}
-data <- read.csv("../INR-2024/datasets/water_potability.csv")
+data <- read.csv("./INR-2024/datasets/water_potability.csv")
 
 head(data, n=10)
 
@@ -294,7 +294,7 @@ Make sure the dataset is in the same directory or folder as this .Rmd file for e
 ::::
 
 ```{r}
-heart <- read.csv("../INR-2024/datasets/healthcare-dataset-stroke-data.csv", stringsAsFactors=TRUE)
+heart <- read.csv("./INR-2024/datasets/healthcare-dataset-stroke-data.csv", stringsAsFactors=TRUE)
 
 head(heart)
 str(heart)
@@ -835,7 +835,7 @@ Insert a code chunk underneath each step to carry out the instruction.
 1. Read in the "diamonds.csv" data into an object called data. Use the `strongAsFactors` parameter to automatically import the character values as a factor. Check the object you created by printing out the first 10 rows and applying the summary function.
 
 ```{r}
-diamonds <- read.csv("../INR-2024/datasets/diamonds.csv", header = T, stringsAsFactors = T)
+diamonds <- read.csv("./INR-2024/datasets/diamonds.csv", header = T, stringsAsFactors = T)
 
 head(diamonds)
 summary(diamonds)

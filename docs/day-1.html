@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Day 1 | Introduction to R 2024</title>
   <meta name="description" content="Workshop website for the 2024 Introduction to R Canadian Bioinformatics Workshop" />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Day 1 | Introduction to R 2024" />
   <meta property="og:type" content="book" />
@@ -52,11 +52,34 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Introduction to R",
+  "description": "The complete set of tutorials, slides, and practical exercises for the Introduction to R 2024 Canadian Bioinformatics Workshop, hosted on GitHub Pages.",
+  "url": "https://bioinformaticsdotca.github.io/INR_2024",
+  "learningResourceType": ["tutorial", "slides", "exercise"],
+  "inLanguage": "en",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "provider": {
+    "@type": "Organization",
+    "name": "Bioinformatics.ca",
+    "url": "https://bioinformatics.ca"
+  },
+  "keywords": "",
+  "isPartOf": {
+    "@type": "Course",
+    "@id": "https://bioinformaticsdotca.github.io/INR_2024/"
+  }
+}
+</script>
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +89,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -367,7 +390,7 @@ Sea Fisheries Division, Technical Report No. 48 (ISSN 1034-3288)
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="day-1.html#cb32-1" tabindex="-1"></a><span class="co">#abalone &lt;- read.csv(&quot;anotherfolder//abalone.csv&quot;, header = TRUE)</span></span>
 <span id="cb32-2"><a href="day-1.html#cb32-2" tabindex="-1"></a><span class="co">#abalone &lt;- read.csv(&quot;C:/Users/Frances/Downloads/BioinformaticsWorkshop_INR_June2024-20240611T023701Z-001/BioinformaticsWorkshop_INR_June2024/abalone.csv&quot;)</span></span>
 <span id="cb32-3"><a href="day-1.html#cb32-3" tabindex="-1"></a></span>
-<span id="cb32-4"><a href="day-1.html#cb32-4" tabindex="-1"></a>abalone <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../INR-2024/datasets/abalone.csv&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb32-4"><a href="day-1.html#cb32-4" tabindex="-1"></a>abalone <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;./INR-2024/datasets/abalone.csv&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb32-5"><a href="day-1.html#cb32-5" tabindex="-1"></a><span class="co"># abalone - commented out since is a big file</span></span></code></pre></div>
 <p>It is almost never useful to print out the whole table because humans are not good at inspecting numbers. Built in summary statistics are helpful for us to get an overview of the data.</p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="day-1.html#cb33-1" tabindex="-1"></a><span class="fu">str</span>(abalone)</span></code></pre></div>
@@ -481,13 +504,13 @@ C. Use the “mean()” function to determine the mean abalone diameter overall 
 </ul>
 <p>As an overview of our environment, we can also use the <code>sessionInfo()</code> command. This is a good practice to have at the end of your code to document which packages you used and what version they were.</p>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="day-1.html#cb59-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
-<pre><code>## R version 4.4.2 (2024-10-31)
+<pre><code>## R version 4.5.0 (2025-04-11)
 ## Platform: aarch64-apple-darwin20
-## Running under: macOS Sequoia 15.6
+## Running under: macOS Sequoia 15.7.1
 ## 
 ## Matrix products: default
-## BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
-## LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+## BLAS:   /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRblas.0.dylib 
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
 ## 
 ## locale:
 ## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
@@ -499,11 +522,11 @@ C. Use the “mean()” function to determine the mean abalone diameter overall 
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] digest_0.6.37     R6_2.6.1          bookdown_0.43     fastmap_1.2.0    
-##  [5] xfun_0.52         cachem_1.1.0      knitr_1.50        htmltools_0.5.8.1
-##  [9] rmarkdown_2.29    lifecycle_1.0.4   cli_3.6.5         sass_0.4.10      
-## [13] jquerylib_0.1.4   compiler_4.4.2    rstudioapi_0.17.1 tools_4.4.2      
-## [17] evaluate_1.0.4    bslib_0.9.0       yaml_2.3.10       jsonlite_2.0.0   
+##  [1] digest_0.6.37     R6_2.6.1          bookdown_0.45     fastmap_1.2.0    
+##  [5] xfun_0.54         cachem_1.1.0      knitr_1.50        htmltools_0.5.8.1
+##  [9] rmarkdown_2.30    lifecycle_1.0.4   cli_3.6.5         sass_0.4.10      
+## [13] jquerylib_0.1.4   compiler_4.5.0    rstudioapi_0.17.1 tools_4.5.0      
+## [17] evaluate_1.0.5    bslib_0.9.0       yaml_2.3.10       jsonlite_2.0.0   
 ## [21] rlang_1.1.6</code></pre>
 <p>Notice that we have some base packages active even though we did not explicitly call for them.</p>
 </div>
@@ -516,13 +539,13 @@ C. Use the “mean()” function to determine the mean abalone diameter overall 
 <div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="day-1.html#cb61-1" tabindex="-1"></a><span class="co">#install.packages(&quot;tidyverse&quot;)</span></span>
 <span id="cb61-2"><a href="day-1.html#cb61-2" tabindex="-1"></a></span>
 <span id="cb61-3"><a href="day-1.html#cb61-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<pre><code>## ── Attaching core tidyverse packages ────────── tidyverse 2.0.0 ──
+<pre><code>## ── Attaching core tidyverse packages ────── tidyverse 2.0.0 ──
 ## ✔ dplyr     1.1.4     ✔ readr     2.1.5
-## ✔ forcats   1.0.0     ✔ stringr   1.5.1
-## ✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+## ✔ forcats   1.0.1     ✔ stringr   1.6.0
+## ✔ ggplot2   4.0.0     ✔ tibble    3.3.0
 ## ✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-## ✔ purrr     1.0.4     
-## ── Conflicts ──────────────────────────── tidyverse_conflicts() ──
+## ✔ purrr     1.2.0     
+## ── Conflicts ──────────────────────── tidyverse_conflicts() ──
 ## ✖ dplyr::filter() masks stats::filter()
 ## ✖ dplyr::lag()    masks stats::lag()
 ## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
@@ -832,8 +855,7 @@ C. Use the “mean()” function to determine the mean abalone diameter overall 
 <p>A single continuous variable can be displayed using a histogram.</p>
 <div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="day-1.html#cb112-1" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> abalone, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>Length)) <span class="sc">+</span></span>
 <span id="cb112-2"><a href="day-1.html#cb112-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with
-## `binwidth`.</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
 <p><img src="_main_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
 <div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="day-1.html#cb114-1" tabindex="-1"></a><span class="fu">nrow</span>(abalone)</span></code></pre></div>
 <pre><code>## [1] 4177</code></pre>
@@ -923,7 +945,7 @@ Adding a third plot to play around with the distribution between panels</p>
 <div id="exporting-plots" class="section level3 hasAnchor">
 <h3>Exporting plots<a href="day-1.html#exporting-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="day-1.html#cb133-1" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;/Users/clin/Documents/CBWGitHub/INR_2024&quot;</code></pre>
+<pre><code>## [1] &quot;/Users/nhughes/Documents/CBWGithub/INR_2024&quot;</code></pre>
 <div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="day-1.html#cb135-1" tabindex="-1"></a><span class="fu">png</span>(<span class="at">file =</span> <span class="st">&quot;INR_fig1.png&quot;</span>, <span class="at">bg =</span> <span class="st">&quot;transparent&quot;</span>)</span>
 <span id="cb135-2"><a href="day-1.html#cb135-2" tabindex="-1"></a>top_row</span>
 <span id="cb135-3"><a href="day-1.html#cb135-3" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>

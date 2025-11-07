@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Day 2 | Introduction to R 2024</title>
   <meta name="description" content="Workshop website for the 2024 Introduction to R Canadian Bioinformatics Workshop" />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Day 2 | Introduction to R 2024" />
   <meta property="og:type" content="book" />
@@ -52,11 +52,34 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Introduction to R",
+  "description": "The complete set of tutorials, slides, and practical exercises for the Introduction to R 2024 Canadian Bioinformatics Workshop, hosted on GitHub Pages.",
+  "url": "https://bioinformaticsdotca.github.io/INR_2024",
+  "learningResourceType": ["tutorial", "slides", "exercise"],
+  "inLanguage": "en",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "provider": {
+    "@type": "Organization",
+    "name": "Bioinformatics.ca",
+    "url": "https://bioinformatics.ca"
+  },
+  "keywords": "",
+  "isPartOf": {
+    "@type": "Course",
+    "@id": "https://bioinformaticsdotca.github.io/INR_2024/"
+  }
+}
+</script>
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -66,7 +89,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -259,7 +282,7 @@ Potability</p>
 <ol style="list-style-type: decimal">
 <li>Read in the “water_potability.csv” data into an object called data Check the object you created by printing out the first 10 rows and applying the summary function.</li>
 </ol>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="day-2.html#cb137-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../INR-2024/datasets/water_potability.csv&quot;</span>)</span>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="day-2.html#cb137-1" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;./INR-2024/datasets/water_potability.csv&quot;</span>)</span>
 <span id="cb137-2"><a href="day-2.html#cb137-2" tabindex="-1"></a></span>
 <span id="cb137-3"><a href="day-2.html#cb137-3" tabindex="-1"></a><span class="fu">head</span>(data, <span class="at">n=</span><span class="dv">10</span>)</span></code></pre></div>
 <pre><code>##           ph Hardness   Solids Chloramines  Sulfate Conductivity Organic_carbon
@@ -625,7 +648,7 @@ Rmd – indicates language in code chunk</p>
 <p>Make sure the dataset is in the same directory or folder as this .Rmd file for ease of import</p>
 </div>
 </div>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="day-2.html#cb177-1" tabindex="-1"></a>heart <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../INR-2024/datasets/healthcare-dataset-stroke-data.csv&quot;</span>, <span class="at">stringsAsFactors=</span><span class="cn">TRUE</span>)</span>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="day-2.html#cb177-1" tabindex="-1"></a>heart <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;./INR-2024/datasets/healthcare-dataset-stroke-data.csv&quot;</span>, <span class="at">stringsAsFactors=</span><span class="cn">TRUE</span>)</span>
 <span id="cb177-2"><a href="day-2.html#cb177-2" tabindex="-1"></a></span>
 <span id="cb177-3"><a href="day-2.html#cb177-3" tabindex="-1"></a><span class="fu">head</span>(heart)</span></code></pre></div>
 <pre><code>##      id gender age hypertension heart_disease ever_married     work_type
@@ -922,7 +945,7 @@ Rmd – indicates language in code chunk</p>
 <span id="cb244-2"><a href="day-2.html#cb244-2" tabindex="-1"></a>smoke_cat</span></code></pre></div>
 <pre><code>## [1] &quot;formerly smoked&quot; &quot;never smoked&quot;    &quot;smokes&quot;</code></pre>
 <div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="day-2.html#cb246-1" tabindex="-1"></a><span class="fu">getwd</span>() <span class="co"># get working directory</span></span></code></pre></div>
-<pre><code>## [1] &quot;/Users/clin/Documents/CBWGitHub/INR_2024&quot;</code></pre>
+<pre><code>## [1] &quot;/Users/nhughes/Documents/CBWGithub/INR_2024&quot;</code></pre>
 <div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="day-2.html#cb248-1" tabindex="-1"></a><span class="cf">for</span>(cat <span class="cf">in</span> smoke_cat) {</span>
 <span id="cb248-2"><a href="day-2.html#cb248-2" tabindex="-1"></a>  </span>
 <span id="cb248-3"><a href="day-2.html#cb248-3" tabindex="-1"></a>  <span class="co"># Specify file name</span></span>
@@ -1064,8 +1087,7 @@ Rmd – indicates language in code chunk</p>
 <span id="cb266-2"><a href="day-2.html#cb266-2" tabindex="-1"></a></span>
 <span id="cb266-3"><a href="day-2.html#cb266-3" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x=</span>bmi)) <span class="sc">+</span> </span>
 <span id="cb266-4"><a href="day-2.html#cb266-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with
-## `binwidth`.</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
 <p><img src="_main_files/figure-html/unnamed-chunk-95-1.png" width="672" /></p>
 <p>Staticians commonly prefer working with normally distributed data because this is a heavily studied and predictable distribution. Confirming that the variable is normally distributed opens up options for robust statistical approaches to be applied.</p>
 <p>Is this heart dataset normally distributed?</p>
@@ -1075,8 +1097,7 @@ Rmd – indicates language in code chunk</p>
 <p>For a normal distribution, we ideally want a straight diagonal line. Notice the slight curve on the right end, we can see the tail is also on the right side of this histogram. Curves indicate deviation away from normality. This looks faily normal, we can check to see if a transformation improves the distribution.</p>
 <div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="day-2.html#cb269-1" tabindex="-1"></a><span class="fu">ggplot</span>(heart, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">log2</span>(bmi))) <span class="sc">+</span> </span>
 <span id="cb269-2"><a href="day-2.html#cb269-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with
-## `binwidth`.</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
 <p><img src="_main_files/figure-html/unnamed-chunk-97-1.png" width="672" /></p>
 <div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="day-2.html#cb271-1" tabindex="-1"></a><span class="fu">qqnorm</span>(<span class="fu">log2</span>(heart<span class="sc">$</span>bmi))</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-97-2.png" width="672" /></p>
@@ -1100,7 +1121,7 @@ Rmd – indicates language in code chunk</p>
 <div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="day-2.html#cb274-1" tabindex="-1"></a>summary</span></code></pre></div>
 <pre><code>## function (object, ...) 
 ## UseMethod(&quot;summary&quot;)
-## &lt;bytecode: 0x11cc94f30&gt;
+## &lt;bytecode: 0x14fe30410&gt;
 ## &lt;environment: namespace:base&gt;</code></pre>
 <p>This overall looks like a good model. The p-value is very low and statistically significant. However, the Multiple R-squared values is small and the slope of bmi is low.</p>
 <p>From the results, we could conclude that changes in bmi are associated to the average glucose level as the p-value is less than 0.05. We can also state that as bmi increases, there will be an increase in the average glucose level as the slope is weakly positive 0.11.</p>
@@ -1197,8 +1218,8 @@ Rmd – indicates language in code chunk</p>
 <span id="cb291-4"><a href="day-2.html#cb291-4" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> fit_nostroke<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> fit_nostroke<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb291-5"><a href="day-2.html#cb291-5" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">100</span>, <span class="dv">200</span>)<span class="sc">+</span> </span>
 <span id="cb291-6"><a href="day-2.html#cb291-6" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">100</span>, <span class="dv">200</span>)</span></code></pre></div>
-<pre><code>## Warning: Removed 2951 rows containing missing values or values outside the
-## scale range (`geom_point()`).</code></pre>
+<pre><code>## Warning: Removed 2951 rows containing missing values or values outside
+## the scale range (`geom_point()`).</code></pre>
 <p><img src="_main_files/figure-html/unnamed-chunk-104-1.png" width="672" /></p>
 </div>
 <div id="demo-detour-to-function-for-lm-plots" class="section level3 hasAnchor">
@@ -1264,7 +1285,7 @@ table width of top of diamond relative to widest point (43–95)</p>
 <ol style="list-style-type: decimal">
 <li>Read in the “diamonds.csv” data into an object called data. Use the <code>strongAsFactors</code> parameter to automatically import the character values as a factor. Check the object you created by printing out the first 10 rows and applying the summary function.</li>
 </ol>
-<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="day-2.html#cb294-1" tabindex="-1"></a>diamonds <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../INR-2024/datasets/diamonds.csv&quot;</span>, <span class="at">header =</span> T, <span class="at">stringsAsFactors =</span> T)</span>
+<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="day-2.html#cb294-1" tabindex="-1"></a>diamonds <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;./INR-2024/datasets/diamonds.csv&quot;</span>, <span class="at">header =</span> T, <span class="at">stringsAsFactors =</span> T)</span>
 <span id="cb294-2"><a href="day-2.html#cb294-2" tabindex="-1"></a></span>
 <span id="cb294-3"><a href="day-2.html#cb294-3" tabindex="-1"></a><span class="fu">head</span>(diamonds)</span></code></pre></div>
 <pre><code>##   X carat       cut color clarity depth table price    x    y    z
@@ -1381,7 +1402,8 @@ table width of top of diamond relative to widest point (43–95)</p>
 <div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="day-2.html#cb306-1" tabindex="-1"></a><span class="fu">diamond_continous</span>(<span class="st">&quot;carat&quot;</span>, <span class="st">&quot;clarity&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb306-2"><a href="day-2.html#cb306-2" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> fit_diamond<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">slope =</span> fit_diamond<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">color =</span> <span class="st">&quot;red&quot;</span>, <span class="at">size =</span> <span class="dv">2</span>) </span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
-<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2
+## 3.4.0.
 ## ℹ Please use `linewidth` instead.
 ## This warning is displayed once every 8 hours.
 ## Call `lifecycle::last_lifecycle_warnings()` to see where this

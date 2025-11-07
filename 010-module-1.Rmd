@@ -173,7 +173,7 @@ Notice when we open the abalone dataset that the first row holds the column name
 #abalone <- read.csv("anotherfolder//abalone.csv", header = TRUE)
 #abalone <- read.csv("C:/Users/Frances/Downloads/BioinformaticsWorkshop_INR_June2024-20240611T023701Z-001/BioinformaticsWorkshop_INR_June2024/abalone.csv")
 
-abalone <- read.csv("../INR-2024/datasets/abalone.csv", header = TRUE)
+abalone <- read.csv("./INR-2024/datasets/abalone.csv", header = TRUE)
 # abalone - commented out since is a big file
 ```
 
